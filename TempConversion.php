@@ -1,5 +1,7 @@
 <?php
 
+//This tiny php app converts various temperatures
+
 $radioVal = $_POST["Temp"];
 $varOne = '<form action="" method="post">
 <input type="radio" name="Temp" value="FtoC" checked>Fahrenheit to Celsius<br> 
@@ -23,7 +25,8 @@ Your Number: <br>
 <input type="submit" />
 </form>';
 
-if (is_numeric($_POST['Num'])) {
+if (is_numeric($_POST['Num'])) 
+{
 
 if(isset($_POST['Num']) and $radioVal == "FtoC")
 {
@@ -43,9 +46,7 @@ elseif(isset($_POST['Num']) and $radioVal == "FtoK")
 echo $varOne;
 } 
 
-}else{
-    
-echo '<h2>Please enter numbers only.</h2><hr>' . $varOne;
-    
+}else{ 
+echo '<h2>Please enter numbers only.</h2><hr>' . $varOne;   
 }
  ?>
